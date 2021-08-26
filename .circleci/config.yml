@@ -14,4 +14,4 @@ jobs:
           command: yarn install
       - run:
           name: Run Tests
-          command: yarn jest canvas_mentions
+          command: yarn jest
