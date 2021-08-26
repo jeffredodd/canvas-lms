@@ -40,7 +40,7 @@ describe('assignments 2 delete dialog', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('deletes the assignment and reloads', async () => {
+  it('deletes the assignment and reloads', async () => {
     delete window.location
     window.location = {reload: jest.fn()}
 
@@ -54,7 +54,7 @@ describe('assignments 2 delete dialog', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('reports errors', async () => {
+  it('reports errors', async () => {
     const assignment = mockAssignment()
     const {getByTestId, getAllByText} = await openDeleteDialog(assignment, [
       saveAssignmentResult(assignment, {state: 'deleted'}, {state: 'deleted'}, 'well rats')

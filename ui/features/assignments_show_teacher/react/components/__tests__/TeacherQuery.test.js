@@ -22,7 +22,7 @@ import {renderTeacherQuery} from './integration/integration-utils'
 
 describe('TeacherQuery', () => {
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders a loading spinner and then the assignment with data from the query', async () => {
+  it('renders a loading spinner and then the assignment with data from the query', async () => {
     const assignment = mockAssignment()
     const {getAllByText, getByTitle} = renderTeacherQuery(assignment)
     expect(getByTitle('Loading...')).toBeInTheDocument()
@@ -30,6 +30,6 @@ describe('TeacherQuery', () => {
   })
 
   /* eslint-disable jest/no-disabled-tests */
-  it.skip('renders a problem screen on a bad graphql query', () => {})
+  it('renders a problem screen on a bad graphql query', () => {})
   /* eslint-enable jest/no-disabled-tests */
 })

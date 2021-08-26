@@ -318,7 +318,7 @@ describe('CommentTextArea', () => {
   // since updating @instructure/ui-media-player to v7
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('notifies users when a submission comments with files is sent', async () => {
+  it('notifies users when a submission comments with files is sent', async () => {
     const mockedFunctionPlacedholder = uploadFileModule.submissionCommentAttachmentsUpload
     uploadFileModule.submissionCommentAttachmentsUpload = () => [
       {id: '1', name: 'awesome-test-image1.png'},
@@ -365,7 +365,7 @@ describe('CommentTextArea', () => {
   // since updating @instructure/ui-media-player to v7
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('users cannot send submission comments with not files or text', async () => {
+  it('users cannot send submission comments with not files or text', async () => {
     const mockedFunctionPlacedholder = uploadFileModule.submissionCommentAttachmentsUpload
     uploadFileModule.submissionCommentAttachmentsUpload = () => [
       {id: '1', name: 'awesome-test-image1.png'},
@@ -396,7 +396,7 @@ describe('CommentTextArea', () => {
   // since updating @instructure/ui-media-player to v7
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('notifies users of error when file fails to upload', async () => {
+  it('notifies users of error when file fails to upload', async () => {
     const mockedFunctionPlacedholder = uploadFileModule.submissionCommentAttachmentsUpload
     uploadFileModule.submissionCommentAttachmentsUpload = () => {
       throw new Error('Error uploading file to canvas API')

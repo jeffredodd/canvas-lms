@@ -49,7 +49,7 @@ it('renders an OverrideSubmissionType summary', () => {
  */
 
 // eslint-disable-next-line jest/no-disabled-tests
-it.skip('renders details of a file submission type', () => {
+it('renders details of a file submission type', () => {
   const override = mockOverride({
     submissionTypes: ['online_upload']
   })
@@ -62,7 +62,7 @@ it.skip('renders details of a file submission type', () => {
 })
 
 // eslint-disable-next-line jest/no-disabled-tests
-it.skip('renders details of a restricted-type file submission type', () => {
+it('renders details of a restricted-type file submission type', () => {
   const override = mockOverride({
     submissionTypes: ['online_upload'],
     allowedExtensions: ['doc', 'xls']
@@ -110,7 +110,7 @@ it('renders details of a url submission type', () => {
 })
 
 // eslint-disable-next-line jest/no-disabled-tests
-it.skip('renders details of multiple submission types', () => {
+it('renders details of multiple submission types', () => {
   const override = mockOverride({
     submissionTypes: ['online_text_entry', 'online_url', 'online_upload']
   })

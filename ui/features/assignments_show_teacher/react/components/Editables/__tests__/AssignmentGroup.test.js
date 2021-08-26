@@ -53,7 +53,7 @@ describe('AssignmenGroupUI', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders the given assignment group in edit mode', () => {
+  it('renders the given assignment group in edit mode', () => {
     const groupList = makeGroupList()
     const {getByTestId} = render(
       <AssignmentGroup
@@ -77,7 +77,7 @@ describe('AssignmenGroupUI', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('calls onChange when the selection changes', () => {
+  it('calls onChange when the selection changes', () => {
     const onchange = jest.fn()
     const onchangemode = jest.fn()
     const groupList = makeGroupList()

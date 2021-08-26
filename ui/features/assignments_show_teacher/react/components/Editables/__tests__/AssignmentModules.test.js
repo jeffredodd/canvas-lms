@@ -54,7 +54,7 @@ describe('AssignmentModulesUI', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders the given assignment modules in edit mode', () => {
+  it('renders the given assignment modules in edit mode', () => {
     const moduleList = makeModuleList()
 
     const {getByText, getByTestId} = render(
@@ -103,7 +103,7 @@ describe('AssignmentModulesUI', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('calls onChange when the selection changes', () => {
+  it('calls onChange when the selection changes', () => {
     const onchange = jest.fn()
     const onchangemode = jest.fn()
     const moduleList = makeModuleList()

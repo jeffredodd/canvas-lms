@@ -119,7 +119,7 @@ describe('Assignment Student Content View', () => {
       expect(queryByRole('button', {name: 'Mark as done'})).not.toBeInTheDocument()
     })
 
-    it.skip('renders the rubric if the assignment has one', async () => {
+    it('renders the rubric if the assignment has one', async () => {
       window.ENV.ASSIGNMENT_ID = 1
       window.ENV.COURSE_ID = 1
       props.assignment.rubric = {}
@@ -183,7 +183,7 @@ describe('Assignment Student Content View', () => {
 
     // https://instructure.atlassian.net/browse/USERS-385
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('renders Comments', async () => {
+    it('renders Comments', async () => {
       const mocks = await makeMocks()
       const props = await mockAssignmentAndSubmission()
       const {getByText} = render(

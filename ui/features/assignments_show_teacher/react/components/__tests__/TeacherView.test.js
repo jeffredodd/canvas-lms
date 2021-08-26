@@ -32,7 +32,7 @@ import {
 describe('TeacherView', () => {
   describe('basic TeacherView stuff', () => {
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('shows the assignment', async () => {
+    it('shows the assignment', async () => {
       const assignment = mockAssignment()
       const {getByText, getAllByText} = await renderTeacherView(assignment)
       expect(await waitFor(() => getAllByText(assignment.name)[0])).toBeInTheDocument()
@@ -48,7 +48,7 @@ describe('TeacherView', () => {
   describe('publish toggle', () => {
     // will be re-checked with ADMIN-2345 for flakiness
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('unpublishes the assignment', async () => {
+    it('unpublishes the assignment', async () => {
       const assignment = mockAssignment()
       const {getByText, container} = await renderTeacherQueryAndWaitForResult(assignment, [
         saveAssignmentResult(assignment, {state: 'unpublished'}, {state: 'unpublished'})
@@ -65,7 +65,7 @@ describe('TeacherView', () => {
 
     // will be re-checked with ADMIN-2345 for flakiness
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('saves the entire assignment when publishing via the toggle', async () => {
+    it('saves the entire assignment when publishing via the toggle', async () => {
       const assignment = mockAssignment({state: 'unpublished'})
       const {getByText, container} = await renderTeacherQueryAndWaitForResult(assignment, [
         saveAssignmentResult(
@@ -96,7 +96,7 @@ describe('TeacherView', () => {
     })
 
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('resets publish toggle when save assignment fails', async () => {
+    it('resets publish toggle when save assignment fails', async () => {
       const assignment = mockAssignment({state: 'unpublished'})
       const {getByText, container} = await renderTeacherQueryAndWaitForResult(assignment, [
         saveAssignmentResult(
@@ -130,7 +130,7 @@ describe('TeacherView', () => {
 
   describe('editing the assignment', () => {
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('render footer when assignment is changed', async () => {
+    it('render footer when assignment is changed', async () => {
       const assignment = mockAssignment({name: 'old name'})
       const {getByText, getByDisplayValue, getByTestId} = await renderTeacherView(assignment, [], {
         readOnly: false
@@ -149,7 +149,7 @@ describe('TeacherView', () => {
     })
 
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('resets assignment on Cancel', async () => {
+    it('resets assignment on Cancel', async () => {
       const assignment = mockAssignment({name: 'old name'})
       const {getByText, getAllByText, getByDisplayValue, getByTestId} = renderTeacherView(
         assignment,
@@ -179,7 +179,7 @@ describe('TeacherView', () => {
     })
 
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('aborts save if there is an invalid field in the assignment', async () => {
+    it('aborts save if there is an invalid field in the assignment', async () => {
       const assignment = mockAssignment({name: 'old name'})
       const {getByText, getAllByText, getByDisplayValue, getByTestId} = renderTeacherView(
         assignment,
@@ -207,7 +207,7 @@ describe('TeacherView', () => {
     })
 
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('bypasses update if new value == old', async () => {
+    it('bypasses update if new value == old', async () => {
       // this spec is here to exercise 1 line of code
       const assignment = mockAssignment({name: 'old name'})
       const {getByText, getAllByText, getByDisplayValue, queryByTestId} = renderTeacherView(

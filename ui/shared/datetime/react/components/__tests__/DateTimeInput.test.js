@@ -125,7 +125,7 @@ describe('DateTimeInput::', () => {
    */
 
   /* eslint-disable jest/no-disabled-tests */
-  it.skip('works when a DST boundary is crossed DT -> ST', () => {
+  it('works when a DST boundary is crossed DT -> ST', () => {
     const dstProps = {...props, timezone: 'America/New_York'}
     const {getByLabelText, getByDisplayValue, getAllByText} = renderInput(dstProps)
     getAllByText('Wed, April 7, 2021, 11:00 AM') // should not throw
@@ -138,7 +138,7 @@ describe('DateTimeInput::', () => {
     expect(getByDisplayValue('11:00 AM')).toBeInTheDocument()
   })
 
-  it.skip('works when a DST boundary is crossed ST -> DT', () => {
+  it('works when a DST boundary is crossed ST -> DT', () => {
     const dstProps = {...props, value: '2021-02-01T20:00:00Z', timezone: 'America/New_York'}
     const {getByDisplayValue, getAllByText, rerender} = renderInput(dstProps)
     getAllByText('Mon, February 1, 2021, 3:00 PM') // should not throw

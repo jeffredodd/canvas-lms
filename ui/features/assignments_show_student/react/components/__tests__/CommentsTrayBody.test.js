@@ -143,7 +143,7 @@ describe('CommentsTrayBody', () => {
       expect(getByTestId('svg-placeholder-container')).toBeInTheDocument()
     })
 
-    it.skip('renders a message (no image) if there are comments', async () => {
+    it('renders a message (no image) if there are comments', async () => {
       // unskip in EVAL-1903
       const overrides = {
         SubmissionCommentConnection: {
@@ -170,7 +170,7 @@ describe('CommentsTrayBody', () => {
 
   // https://instructure.atlassian.net/browse/USERS-379
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders error alert when data returned from mutation fails', async () => {
+  it('renders error alert when data returned from mutation fails', async () => {
     const mocks = await Promise.all([mockSubmissionCommentQuery(), mockCreateSubmissionComment()])
     mocks[1].error = new Error('aw shucks')
     const props = await mockAssignmentAndSubmission()
@@ -331,7 +331,7 @@ describe('CommentsTrayBody', () => {
     expect(await findByText('bob')).toBeTruthy()
   })
 
-  it.skip('renders the message when sent', async () => {
+  it('renders the message when sent', async () => {
     // unskip in EVAL-1903
     const mocks = await Promise.all([mockSubmissionCommentQuery(), mockCreateSubmissionComment()])
     const props = await mockAssignmentAndSubmission()
@@ -391,7 +391,7 @@ describe('CommentsTrayBody', () => {
     expect(await waitFor(() => getByText('Sorry, Something Broke'))).toBeInTheDocument()
   })
 
-  it.skip('marks submission comments as read after timeout', async () => {
+  it('marks submission comments as read after timeout', async () => {
     // unskip in EVAL-1903
     jest.useFakeTimers()
 
@@ -495,7 +495,7 @@ describe('CommentsTrayBody', () => {
     ).toBeInTheDocument()
   })
 
-  it.skip('renders comment rows when provided', async () => {
+  it('renders comment rows when provided', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {
@@ -512,7 +512,7 @@ describe('CommentsTrayBody', () => {
     expect(rows).toHaveLength(comments.length)
   })
 
-  it.skip('renders shortname when shortname is provided', async () => {
+  it('renders shortname when shortname is provided', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {nodes: [{}]},
@@ -526,7 +526,7 @@ describe('CommentsTrayBody', () => {
     expect(getAllByText('bob builder')).toHaveLength(1)
   })
 
-  it.skip('renders Anonymous when author is not provided', async () => {
+  it('renders Anonymous when author is not provided', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {nodes: [{author: null}]}
@@ -541,7 +541,7 @@ describe('CommentsTrayBody', () => {
     expect(getAllByText('Anonymous')).toHaveLength(1)
   })
 
-  it.skip('displays a single attachment', async () => {
+  it('displays a single attachment', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {nodes: [{}]},
@@ -558,7 +558,7 @@ describe('CommentsTrayBody', () => {
     expect(renderedAttachment).toContainElement(getByText('Test Display Name'))
   })
 
-  it.skip('displays multiple attachments', async () => {
+  it('displays multiple attachments', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {
@@ -587,7 +587,7 @@ describe('CommentsTrayBody', () => {
     expect(renderedAttachment2).toContainElement(getByText('attachment2'))
   })
 
-  it.skip('does not display attachments if there are none', async () => {
+  it('does not display attachments if there are none', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {nodes: [{attachments: []}]}
@@ -602,7 +602,7 @@ describe('CommentsTrayBody', () => {
     expect(container.querySelector('a[href]')).toBeNull()
   })
 
-  it.skip('displays the comments in chronological order', async () => {
+  it('displays the comments in chronological order', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {
@@ -631,7 +631,7 @@ describe('CommentsTrayBody', () => {
     expect(rows[2]).toHaveTextContent('Sun Mar 3, 2019 9:32pm')
   })
 
-  it.skip('includes an icon on an attachment', async () => {
+  it('includes an icon on an attachment', async () => {
     // unskip in EVAL-1903
     const overrides = {
       SubmissionCommentConnection: {nodes: [{}]},

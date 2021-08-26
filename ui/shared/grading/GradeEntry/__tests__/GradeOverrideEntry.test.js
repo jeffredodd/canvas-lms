@@ -35,7 +35,7 @@ describe('GradeOverrideEntry', () => {
   describe('#enterGradesAs', () => {
     // TODO: GRADE-1926 Return `EnterGradesAs.GRADING_SCHEME` when a grading scheme is used
     /* eslint-disable-next-line jest/no-disabled-tests */
-    it.skip(`is '${EnterGradesAs.GRADING_SCHEME}' when using grading scheme`, () => {
+    it(`is '${EnterGradesAs.GRADING_SCHEME}' when using grading scheme`, () => {
       const gradeEntry = new GradeOverrideEntry(options)
       expect(gradeEntry.enterGradesAs).toEqual(EnterGradesAs.GRADING_SCHEME)
     })

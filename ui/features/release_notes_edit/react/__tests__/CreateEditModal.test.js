@@ -56,7 +56,7 @@ describe('create modal', () => {
   })
 
   // TODO unskip and finish these tests after upgrading jest/jsdom
-  it.skip('It blocks submission unless the basic english fields are completed', () => {
+  it('It blocks submission unless the basic english fields are completed', () => {
     const onSubmit = jest.fn()
     const {getByLabelText, getByText} = render(
       <CreateEditModal
@@ -77,7 +77,7 @@ describe('create modal', () => {
     expect(getByText('Save').closest('button')).not.toBeDisabled()
   })
 
-  it.skip('It submits the expected object', () => {
+  it('It submits the expected object', () => {
     const onSubmit = jest.fn()
     const {getByLabelText, getByText} = render(
       <CreateEditModal

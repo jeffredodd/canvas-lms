@@ -183,7 +183,7 @@ describe('UploadFile: ComputerPanel', () => {
     // from "Upload Document", it works.
     // see also packages/canvas-media/src/__tests__/ComputerPanel.test.js
     // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('Renders a video player preview if afile type is a video', async () => {
+    it('Renders a video player preview if afile type is a video', async () => {
       const aFile = new File(['foo'], 'foo.mp4', {
         type: 'video/mp4'
       })

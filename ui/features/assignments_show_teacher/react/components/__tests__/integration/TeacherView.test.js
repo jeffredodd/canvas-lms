@@ -76,7 +76,7 @@ function mocks() {
 
 describe('TeacherView', () => {
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('updates assignment, including overrides', async () => {
+  it('updates assignment, including overrides', async () => {
     // what this spec _really_ tests is that the saveAssignment mutation the code
     // calls matches the mocked mutation, which we know includes the
     // AssignmentOverrides array. So we can infer that TeacherView is

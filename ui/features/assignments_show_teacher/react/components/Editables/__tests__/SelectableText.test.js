@@ -53,7 +53,7 @@ describe('SelectableText, single', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders the value in edit mode', () => {
+  it('renders the value in edit mode', () => {
     const renderView = jest.fn()
     const {getByDisplayValue} = render(
       <SelectableText
@@ -110,7 +110,7 @@ describe('SelectableText, multiple', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders the value in edit mode', async () => {
+  it('renders the value in edit mode', async () => {
     function findCongero(name) {
       return (content, element) =>
         element.parentElement.tagName === 'BUTTON' && content.includes(name)

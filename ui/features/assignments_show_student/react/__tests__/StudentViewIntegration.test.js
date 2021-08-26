@@ -201,7 +201,7 @@ describe('student view integration tests', () => {
       return mockResults
     }
 
-    it.skip('opens the RCE when the Start Entry button is clicked', async () => {
+    it('opens the RCE when the Start Entry button is clicked', async () => {
       // TODO: get this to work with latest @testing-library
       const mocks = await createTextMocks({
         Assignment: {submissionTypes: ['online_text_entry']},

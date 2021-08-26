@@ -112,7 +112,7 @@ const mocks = [
 
 describe('AssignmentModules', () => {
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('queries group list on edit', async () => {
+  it('queries group list on edit', async () => {
     const {getByText} = render(
       <CanvasValidatedMockedProvider mocks={mocks} addTypename={false}>
         <AssignmentModules

@@ -115,7 +115,7 @@ const mocks = [
 
 describe('AssignmentGroup', () => {
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('queries group list on edit', async () => {
+  it('queries group list on edit', async () => {
     const {getByText} = render(
       <CanvasValidatedMockedProvider mocks={mocks} addTypename={false}>
         <AssignmentGroup courseId="55" mode="edit" onChange={() => {}} onChangeMode={() => {}} />

@@ -46,7 +46,7 @@ it('renders the given assignment type in view mode', () => {
 })
 
 // eslint-disable-next-line jest/no-disabled-tests
-it.skip('renders the given assignment type in edit mode', () => {
+it('renders the given assignment type in edit mode', () => {
   const {getByTestId} = render(
     <AssignmentType
       mode="edit"
@@ -68,7 +68,7 @@ it('renders the placeholder when not given a value', () => {
 })
 
 // eslint-disable-next-line jest/no-disabled-tests
-it.skip('has 3 options if quiz.next is not enabled', () => {
+it('has 3 options if quiz.next is not enabled', () => {
   const {container} = render(
     <AssignmentType
       mode="edit"
@@ -83,7 +83,7 @@ it.skip('has 3 options if quiz.next is not enabled', () => {
 })
 
 // eslint-disable-next-line jest/no-disabled-tests
-it.skip('has 4 options if quiz.next is enabled', () => {
+it('has 4 options if quiz.next is enabled', () => {
   global.window.ENV.QUIZ_LTI_ENABLED = true
   const {container} = render(
     <AssignmentType
@@ -99,7 +99,7 @@ it.skip('has 4 options if quiz.next is enabled', () => {
 })
 
 // eslint-disable-next-line jest/no-disabled-tests
-it.skip('calls onChange when the selection changes', () => {
+it('calls onChange when the selection changes', () => {
   const onchange = jest.fn()
   const onchangemode = jest.fn()
   const {container} = render(

@@ -390,7 +390,7 @@ describe('DiscussionTopicContainer', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders a modal to copy content', async () => {
+  it('renders a modal to copy content', async () => {
     const container = setup({discussionTopic: Discussion.mock()})
     const kebob = await container.findByTestId('discussion-post-menu-trigger')
     fireEvent.click(kebob)

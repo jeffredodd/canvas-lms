@@ -845,7 +845,7 @@ describe('OutcomeManagementPanel', () => {
       expect(getByText('Groups')).toBeInTheDocument()
     })
 
-    it.skip('renders the groups within the drilldown', async () => {
+    it('renders the groups within the drilldown', async () => {
       const {getByText, queryByText} = render(<OutcomeManagementPanel />, {
         mocks: accountMocks({childGroupsCount: 2})
       })
@@ -855,7 +855,7 @@ describe('OutcomeManagementPanel', () => {
       expect(getByText('Account folder 1')).toBeInTheDocument()
     })
 
-    it.skip('renders the action link for the root group', async () => {
+    it('renders the action link for the root group', async () => {
       const {getByText, queryByText} = render(<OutcomeManagementPanel />, {
         mocks: accountMocks({childGroupsCount: 2})
       })

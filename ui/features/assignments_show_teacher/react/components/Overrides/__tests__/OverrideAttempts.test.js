@@ -54,7 +54,7 @@ describe('OverrideAttempts', () => {
    *  resumes on A2.
    */
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders unlimited override attempts detail', () => {
+  it('renders unlimited override attempts detail', () => {
     const override = mockOverride({})
 
     const {getByLabelText, getByTestId, queryByTestId} = render(
@@ -73,7 +73,7 @@ describe('OverrideAttempts', () => {
   })
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders limited override attempts detail', () => {
+  it('renders limited override attempts detail', () => {
     const override = mockOverride({allowedAttempts: 2})
     const {getByLabelText, getByTestId} = render(
       <OverrideAttempts

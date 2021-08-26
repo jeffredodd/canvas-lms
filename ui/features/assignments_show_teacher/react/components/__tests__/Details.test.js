@@ -138,7 +138,7 @@ describe('Assignment Details', () => {
    */
 
   // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('renders override details when expand button is clicked', () => {
+  it('renders override details when expand button is clicked', () => {
     const assignment = mockAssignment({
       dueAt: '2019-09-01T23:59:59-06:00',
       lockAt: '2019-09-03T23:59:59-06:00',
