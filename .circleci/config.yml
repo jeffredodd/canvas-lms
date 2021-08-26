@@ -3,12 +3,15 @@ jobs:
   build:
     working_directory: ~/canvas-lms
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:14
     steps:
       - checkout
       - run:
+          name: Install Yarn
+          command: curl -o- -L https://yarnpkg.com/install.sh | bash
+      - run:
           name: Install Dependencies
-          command: npm install
+          command: yarn install
       - run:
           name: Run Tests
-          command: npm jest
+          command: yarn jest canvas_mentions
