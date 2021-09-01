@@ -260,7 +260,7 @@
     "jest-environment-jsdom-fourteen": "^0.1.0",
     "jest-fetch-mock": "^3.0.3",
     "jest-html-reporter": "^3",
-    "jest-junit": "^7",
+    "jest-junit": "^12.2.0",
     "jest-localstorage-mock": "^2",
     "jest-moxios-utils": "^1",
     "jest-raw-loader": "^1",
@@ -275,7 +275,6 @@
     "karma-sourcemap-loader": "^0.3",
     "karma-spec-reporter": "^0.0.32",
     "karma-verbose-reporter": "^0.0.6",
-    "karma-webpack": "necessary until https://github.com/ryanclark/karma-webpack/pull/449 is merged",
     "karma-webpack": "instructure/karma-webpack#patch1",
     "lint-staged": "^9",
     "loader-utils": "^1",
@@ -296,7 +295,6 @@
     "sinon": "^7",
     "style-loader": "^0.23",
     "stylelint": "^10",
-    "terser-webpack-plugin": "KEEP THIS IN SYNC WITH webpack's!",
     "terser-webpack-plugin": "^1.4.3",
     "through2": "^3",
     "tinymce": "^5",
@@ -374,16 +372,16 @@
   },
   "resolutions": {
     "jquery": "https://github.com/instructure/jquery.git#1.7.2-with-AMD-and-CommonJS",
-    "graphael": "this is just here so yarn.lock looks the same whether the analytics plugin is checked out or not",
     "graphael": "https://github.com/instructure/graphael.git",
-    "babel-plugin-dynamic-import-node": "if we let this upgrade to recent versions, we hit https://github.com/babel/babel/issues/11607",
     "babel-plugin-dynamic-import-node": "2.3.0",
-    "@apollo/react-testing": "they introduced a breaking change in 3.1.0 that i couldn't fix with the advertised instructions, see https://github.com/apollographql/react-apollo/blob/master/Changelog.md#potentially-breaking-change",
     "@apollo/react-testing": "3.0.1",
     "@apollo/react-common": "3.0.1",
     "@apollo/react-components": "3.0.1",
     "@apollo/react-hoc": "3.0.1",
     "@apollo/react-hooks": "3.0.1",
     "@apollo/react-ssr": "3.0.1"
+  },
+  "jest-junit": {
+    "addFileAttribute": "true"
   }
 }
