@@ -13,5 +13,7 @@ jobs:
           name: Install Dependencies
           command: yarn install
       - run:
-          name: Run Tests
-          command: yarn jest --runInBand
+          name: Test application
+          command: |
+              TEST=$(circleci tests glob **/__tests__/*.js | circleci tests split --split-by=timings)
+              yarn test $TEST
